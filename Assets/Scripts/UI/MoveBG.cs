@@ -18,12 +18,6 @@ public class MoveBG : MonoBehaviour
 
     private void FixedUpdate()
     {
-        spriteRenderer1.transform.position += Vector3.left * scrollSpeed;
-        spriteRenderer2.transform.position += Vector3.left * scrollSpeed;
-    }
-
-    void Update()
-    {
         if (spriteRenderer1.transform.position.x <= -7.4f)
         {
             spriteRenderer1.transform.position = new Vector3(7.6f, 0, 0);
@@ -33,7 +27,11 @@ public class MoveBG : MonoBehaviour
         {
             spriteRenderer2.transform.position = new Vector3(7.6f, 0, 0);
         }
+    }
 
-        
+    void Update()
+    {
+        spriteRenderer1.transform.position += Vector3.left * (scrollSpeed * Time.deltaTime);
+        spriteRenderer2.transform.position += Vector3.left * (scrollSpeed * Time.deltaTime);
     }
 }
