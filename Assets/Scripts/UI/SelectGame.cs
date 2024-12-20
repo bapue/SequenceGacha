@@ -201,6 +201,8 @@ public class SelectGame : MonoBehaviour
         {
                 GameManager.instance.personName[i] = personName[i].text;
         }
+        
+        SceneManager.LoadScene("UmaMusume");
     }
     
     
