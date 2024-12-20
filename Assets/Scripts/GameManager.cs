@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public int raceNum = 0;
     public int raceFloor = 0;
     public int raceWeather = 0;
+    public float[] speed = new float[12];
+    
+    
     void Awake()
     {
         if (instance == null)
